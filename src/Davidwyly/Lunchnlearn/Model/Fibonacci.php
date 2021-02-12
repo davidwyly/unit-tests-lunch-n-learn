@@ -2,18 +2,15 @@
 
 namespace Davidwyly\Lunchnlearn\Model;
 
-use JetBrains\PhpStorm\Pure;
-
 class Fibonacci
 {
 
     /**
      * @param $index
      *
-     * @return int
+     * @return int|string
      */
-    #[Pure]
-    public static function calculateFibValueByIndex($index): int
+    public static function calculateFibValueByIndex($index): int|string
     {
         if ($index === 0
             || $index === 1
@@ -28,7 +25,7 @@ class Fibonacci
 
         $calculated  = 0;
         for ($i = 2; $i <= abs($index); $i++) {
-            $calculated  = $last + $second_last;
+            $calculated  = gmp_add($last, $second_last);
             $second_last = $last;
             $last        = $calculated;
         }
@@ -36,8 +33,8 @@ class Fibonacci
         if ($index < 0
             && ($index % 2 === 0)
         ) {
-            $calculated = $calculated * -1;
+            $calculated = gmp_mul($calculated,-1);
         }
-        return (int)$calculated;
+        return $calculated;
     }
 }
