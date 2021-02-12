@@ -17,7 +17,8 @@
     "ext-ctype": "*",
     "ext-mbstring": "*",
     "ext-pdo": "*",
-    "ext-gmp": "*"
+    "ext-gmp": "*",
+    "vlucas/phpdotenv": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "*"

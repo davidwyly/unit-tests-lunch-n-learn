@@ -29,7 +29,7 @@ class TestController extends Controller
             $distribution  = new LeadingDigitDistribution();
             $leadingDigits = [];
             for ($i = 1; $i <= self::FIBONACCI_ITERATIONS; $i++) {
-                $fibonacci       = Fibonacci::calculateValueByIndex($i);
+                $fibonacci       = Fibonacci::calculateFibValueByIndex($i);
                 $leadingDigit    = LeadingDigitDistribution::getLeadingDigit($fibonacci);
                 $leadingDigits[] = $leadingDigit;
                 $distribution->assignFrequencyByLeadingDigit($leadingDigit);

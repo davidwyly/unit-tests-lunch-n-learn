@@ -18,6 +18,6 @@ const REQUIRED_ENV_KEYS = [
     'TEST_OAUTH_TOKEN_SECRET',
 ];
 
-$env = new Dotenv(__DIR__);
+$env = Dotenv::createImmutable(__DIR__);
 $env->load();
 $env->required(constant(__NAMESPACE__ . '\REQUIRED_ENV_KEYS'));
