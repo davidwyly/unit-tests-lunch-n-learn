@@ -2,7 +2,9 @@ FROM php:8-fpm
 
 RUN apt-get update
 
-RUN docker-php-ext-install mysqli pdo_mysql
+RUN apt-get install libmpc-dev -y
+
+RUN docker-php-ext-install mysqli pdo_mysql gmp
 
 RUN pecl install xdebug
 

@@ -16,7 +16,8 @@
     "ext-simplexml": "*",
     "ext-ctype": "*",
     "ext-mbstring": "*",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-gmp": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "*"
