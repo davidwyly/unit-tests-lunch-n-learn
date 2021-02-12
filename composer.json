@@ -1,0 +1,30 @@
+{
+  "name": "davidwyly/lunchnlearn",
+  "description": "Lunch n' Learn",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Davidwyly\\": "src/Davidwyly/"
+    }
+  },
+  "config": {
+    "preferred-install": "source"
+  },
+  "require": {
+    "php": ">=8",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "ext-ctype": "*",
+    "ext-mbstring": "*",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "authors": [
+    {
+      "name": "David Wyly",
+      "email": "david.wyly@gmail.com"
+    }
+  ]
+}
